@@ -21,7 +21,7 @@ const SearchBar: React.FC = () => {
 
       const querySnapshot = await getDocs(q);
       const results = querySnapshot.docs.map(
-        (doc) => doc.data() as { username: string }
+        (doc) => doc.data() as { username: string; uid: string }
       );
       console.log(results);
 
