@@ -1,10 +1,12 @@
 "use client";
 import { auth, firestore, users as userReference } from "@/firebase/firebase";
 import { addDoc } from "firebase/firestore";
+import { useRouter } from "next/navigation";
 import React, { FormEvent, useState } from "react";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 
 const Register = () => {
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
@@ -29,6 +31,7 @@ const Register = () => {
       setPassword("");
       setUsername("");
       setFullName("");
+      router.push("/login");
     } catch (error) {
       console.error("Registration failed:", error);
     }

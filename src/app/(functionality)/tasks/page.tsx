@@ -300,6 +300,7 @@ const Page: React.FC = () => {
           <div className="flex justify-center my-4">
             <DatePicker
               selected={selectedDate}
+              // @ts-ignore
               onChange={handleDateChange}
               dateFormat="dd/MM/yyyy"
               value={selectedDate}
