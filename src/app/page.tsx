@@ -13,13 +13,6 @@ const Home = () => {
   //const userSession = window.sessionStorage.getItem("user");
   console.log({ user });
 
-  useEffect(() => {
-    if (!user) {
-      router.push("/register");
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   return (
     <main className="w-screen h-screen">
       <NavBar />
