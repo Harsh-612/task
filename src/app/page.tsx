@@ -14,8 +14,8 @@ const Home = () => {
   console.log({ user });
 
   return (
-    <main className="w-screen h-screen">
-      <NavBar />
+    <main className="w-screen h-screen ">
+      <NavBar></NavBar>
       <HeroSection />
     </main>
   );
