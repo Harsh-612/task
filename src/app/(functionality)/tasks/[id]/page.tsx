@@ -32,7 +32,6 @@ const Page: React.FC<{ params: { id: string } }> = ({ params }) => {
   const user = useAuthState(auth);
   //const userSession = window.sessionStorage.getItem("user");
   console.log({ user });
-  console.log(sessionStorage);
   const router = useRouter();
 
   if (!user) {

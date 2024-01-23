@@ -31,12 +31,11 @@ interface Task {
 }
 const Page: React.FC = () => {
   const user = useAuthState(auth);
-  const userSession = window.sessionStorage.getItem("user");
+  //const userSession = window.sessionStorage.getItem("user");
   console.log({ user });
-  console.log(sessionStorage);
   const router = useRouter();
 
-  if (!user && !userSession) {
+  if (!user) {
     router.push("/register");
   }
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
@@ -407,7 +406,7 @@ const Page: React.FC = () => {
         <div
           className="absolute bottom-8 right-12"
           onClick={() => {
-            sessionStorage.removeItem("user");
+            //sessionStorage.removeItem("user");
             router.push("/login");
           }}
         >
