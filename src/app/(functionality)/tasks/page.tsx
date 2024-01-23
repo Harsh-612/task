@@ -31,7 +31,7 @@ interface Task {
 }
 const Page: React.FC = () => {
   const user = useAuthState(auth);
-  const userSession = sessionStorage.getItem("user");
+  const userSession = window.sessionStorage.getItem("user");
   console.log({ user });
   console.log(sessionStorage);
   const router = useRouter();

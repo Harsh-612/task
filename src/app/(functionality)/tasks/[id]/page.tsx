@@ -30,12 +30,12 @@ interface Task {
 }
 const Page: React.FC<{ params: { id: string } }> = ({ params }) => {
   const user = useAuthState(auth);
-  const userSession = sessionStorage.getItem("user");
+  //const userSession = window.sessionStorage.getItem("user");
   console.log({ user });
   console.log(sessionStorage);
   const router = useRouter();
 
-  if (!user && !userSession) {
+  if (!user) {
     router.push("/register");
   }
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);

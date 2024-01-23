@@ -10,11 +10,11 @@ import { useRouter } from "next/navigation";
 const Home = () => {
   const [user] = useAuthState(auth);
   const router = useRouter();
-  const userSession = sessionStorage.getItem("user");
+  //const userSession = window.sessionStorage.getItem("user");
   console.log({ user });
   console.log(sessionStorage);
 
-  if (!user && !userSession) {
+  if (!user) {
     router.push("/register");
   }
   return (

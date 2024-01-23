@@ -26,7 +26,7 @@ const Register = () => {
         const uid = res.user.uid;
         addDoc(userReference, { uid, username, fullName });
       }
-      sessionStorage.setItem("user", true.toString());
+      //sessionStorage.setItem("user", true.toString());
       setEmail("");
       setPassword("");
       setUsername("");
